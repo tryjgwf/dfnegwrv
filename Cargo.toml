@@ -1,0 +1,39 @@
+[package]
+name = "fgr-rs"
+version = "0.1.1"
+edition = "2021"
+description = "A Find & Grep command line utility with SQL-like syntax"
+homepage = "https://github.com/night-crawler/fgr"
+repository = "https://github.com/night-crawler/fgr"
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
+nom = "7"
+thiserror = "1"
+strum = "0.26"
+strum_macros = "0.26"
+lazy_static = "1.4"
+chrono = "0.4"
+itertools = "0.12"
+dot-writer = "0.1.2"
+ignore = "0.4"
+regex = "1"
+globset = "0.4"
+kanal = "0.1.0-pre8"
+num_cpus = "1.13"
+ctrlc = "3.2"
+clap = { version = "4.0.16", features = ["derive", "color", "suggestions"] }
+uzers = "0.12"
+unix_mode = "0.1"
+infer = "0.15"
+timeout-readwrite = "0.3"
+nnf = "0.1.0"
+
+[dev-dependencies]
+tempfile = "3"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
